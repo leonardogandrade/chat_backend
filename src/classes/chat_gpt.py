@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 import re
@@ -7,7 +8,7 @@ from fastapi.encoders import jsonable_encoder
 
 class ChatGpt:
     def __init__(self) -> None:
-        self.api_key = "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"
+        self.api_key = os.environ["GPT_API_KEY"]
         self.model_id = "gpt-3.5-turbo"
         self.regex_mail = re.compile(
             r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+"
@@ -63,7 +64,7 @@ class ChatGpt:
 
     def call_chatGPT(self, messages, temperature):
         print("CALL GPT")
-        openai.api_key = "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"
+        openai.api_key = self.api_key
         completion = openai.ChatCompletion.create(
             model=self.model_id, messages=messages, temperature=temperature
         )
