@@ -3,6 +3,7 @@
 """
 
 from pydantic import BaseModel, Json
+from typing import List
 
 
 class Item(BaseModel):
@@ -11,5 +12,5 @@ class Item(BaseModel):
 
 
 class Chat(BaseModel):
-    messages: list[Item]
+    messages: List[Item]
     # info: Json[any]
