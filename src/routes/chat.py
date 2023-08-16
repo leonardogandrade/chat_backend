@@ -6,9 +6,9 @@
 from fastapi import APIRouter, Body, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from ..models.chat import Item, Chat
-from ..classes.chat_gpt import ChatGpt
-from ..classes.mail import Mail
+from src.models.chat import Item, Chat
+from src.classes.chat_gpt import ChatGpt
+from src.classes.mail import Mail
 
 
 chat = APIRouter()
