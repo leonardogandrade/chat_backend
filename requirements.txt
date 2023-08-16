@@ -1,5 +1,5 @@
 uvicorn==0.22.0
 resend==0.5.2
-fastapi==0.95.0
+fastapi[all]
 pydantic==1.10.7
 openai==0.27.8
