@@ -1,2 +1,2 @@
-export HOST="0.0.0.0"
-export PORT=8002
+export GPT_API_KEY="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"
+export RESEND_API_KEY="re_YMSPgaL3_GLZpdEjGkzTctiTPhiyPypXu"
