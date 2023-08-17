@@ -10,11 +10,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = {
+origins = [
     "http://localhost:3000",
     "http://localhost",
     "https://chat-yyx-frontend.onrender.com",
-}
+]
 
 app.add_middleware(
     CORSMiddleware,
