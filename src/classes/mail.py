@@ -7,7 +7,7 @@ class Mail:
         pass
 
     def send(self, recipient, content, subject):
-        resend.api_key = os.getenv["RESEND_API_KEY"]
+        resend.api_key = os.environ["RESEND_API_KEY"]
 
         r = resend.Emails.send(
             {
